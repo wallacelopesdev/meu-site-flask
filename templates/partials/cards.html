@@ -1,0 +1,31 @@
+{% macro card(item, cat, chave, acao) -%}
+{% set cor = cat.cor if cat else '#2dd4bf' %}
+{% set busca = ((item.titulo or '') ~ ' ' ~ (item.canal or '') ~ ' ' ~ (item.desc or '') ~ ' ' ~ (cat.nome if cat else ''))|lower %}
+{% set tipo_nome = {'gratis':'Grátis','pago':'Pago','misto':'Grátis + pago'}.get(item.tipo, item.tipo) %}
+{% if chave == 'videos' %}
+<article class="item glass" data-cat="{{ item.categoria }}" data-tipo="" data-busca="{{ busca }}" style="--c:{{ cor }}">
+  <button class="thumb" data-yt="{{ item.id }}" aria-label="Assistir: {{ item.titulo }}">
+    <img src="https://i.ytimg.com/vi/{{ item.id }}/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">
+    <span class="play"><iconify-icon icon="ph:play-fill"></iconify-icon></span>
+  </button>
+  <div class="body">
+    <div class="badges">{% if cat %}<span class="badge cat">{{ cat.nome }}</span>{% endif %}{% if item.nivel %}<span class="badge">{{ item.nivel }}</span>{% endif %}{% if item.idioma %}<span class="badge">{{ item.idioma }}</span>{% endif %}</div>
+    <h3>{{ item.titulo }}</h3>
+    {% if item.canal %}<p>{{ item.canal }}</p>{% endif %}
+  </div>
+</article>
+{% else %}
+<a class="item glass" href="{{ item.url }}" target="_blank" rel="noopener" data-cat="{{ item.categoria }}" data-tipo="{{ item.tipo or '' }}" data-busca="{{ busca }}" style="--c:{{ cor }}">
+  <div class="thumb media" aria-hidden="true">
+    {% if item.imagem %}<img src="{{ item.imagem if item.imagem.startswith('http') else url_for('static', filename='img/' ~ item.imagem) }}" alt="" loading="lazy">
+    {% else %}<iconify-icon icon="{{ item.icone or (cat.icone if cat else 'ph:folder-fill') }}"></iconify-icon>{% endif %}
+  </div>
+  <div class="body">
+    <div class="badges">{% if cat %}<span class="badge cat">{{ cat.nome }}</span>{% endif %}{% if item.tipo %}<span class="badge {{ item.tipo }}">{{ tipo_nome }}</span>{% endif %}</div>
+    <h3>{{ item.titulo }}</h3>
+    {% if item.desc %}<p>{{ item.desc }}</p>{% endif %}
+    <span class="go">{{ acao }} <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon></span>
+  </div>
+</a>
+{% endif %}
+{%- endmacro %}

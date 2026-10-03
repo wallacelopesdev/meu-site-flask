@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Início{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ url_for('static', filename='css/ticker.css') }}">{% endblock %}
+{% block content %}
+<main class="wrap" id="topo">
+  <div class="hero">
+    <div>
+      <h1>Estude TI do zero ao projeto, <span class="gt">em um só lugar.</span></h1>
+      <p class="lead">{{ site.slogan }}</p>
+      <div class="cta">
+        <a class="btn btn-grad" href="{{ url_for('trilhas') }}">Ver trilhas <iconify-icon icon="ph:arrow-right-bold"></iconify-icon></a>
+        <a class="btn btn-ghost" href="{{ url_for('editor') }}"><iconify-icon icon="ph:code-fill"></iconify-icon>Abrir editor online</a>
+      </div>
+      <ul class="stats">
+        {% for k, l in [('videos','vídeos'),('cursos','cursos'),('ias','IAs'),('downloads','downloads')] %}<li class="glass"><b>{{ contagem[k] }}</b> {{ l }}</li>{% endfor %}
+      </ul>
+    </div>
+    <div class="vid-wrap">
+      <div class="vid-ring">
+        <video id="vid" src="{{ url_for('static', filename='media/' ~ site.video) }}" poster="{{ url_for('static', filename='media/' ~ site.poster) }}" autoplay muted loop playsinline preload="metadata" aria-label="Avatar 3D"></video>
+      </div>
+      <button class="vid-btn glass" id="vidBtn" aria-label="Pausar vídeo"><iconify-icon icon="ph:pause-fill" id="vidIcon"></iconify-icon></button>
+    </div>
+  </div>
+</main>
+
+{% include "partials/ticker.html" %}
+
+<div class="wrap">
+  <section>
+    <h2>O que você <span class="gt">encontra aqui</span></h2>
+    <p class="sub">Tudo o que um estudante de TI precisa, organizado por tipo.</p>
+    <div class="hub">
+      {% for ep, ic, t, d in [
+        ('trilhas','ph:signpost-fill','Trilhas','Objetivos com passo a passo do que estudar.'),
+        ('videos','ph:youtube-logo-fill','Vídeos','Aulas do YouTube por categoria, para assistir sem sair do site.'),
+        ('cursos','ph:graduation-cap-fill','Cursos','Plataformas grátis e pagas, com filtros por tipo.'),
+        ('editor','ph:code-fill','Editor online','Escreva, rode e baixe código em várias linguagens.'),
+        ('ias','ph:robot-fill','IAs','Assistentes para tirar dúvidas e revisar código.'),
+        ('downloads','ph:download-simple-fill','Downloads','Instaladores oficiais de linguagens e ferramentas.')] %}
+      <a class="item glass hubcard" style="--c:{{ '#2dd4bf' if loop.index is odd else '#e879f9' }}" href="{{ url_for(ep) }}">
+        <div class="ico"><iconify-icon icon="{{ ic }}"></iconify-icon></div>
+        <h3>{{ t }}</h3><p>{{ d }}</p>
+        <span class="go">Abrir <iconify-icon icon="ph:arrow-right-bold"></iconify-icon></span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section>
+    <h2>Estude por <span class="gt">categoria</span></h2>
+    <p class="sub">Escolha um assunto e veja vídeos e cursos separados.</p>
+    <div class="cats">
+      {% for c in home_cats %}
+      <div class="cat glass" style="--c:{{ c.cor }}">
+        <div class="ico"><iconify-icon icon="{{ c.icone }}"></iconify-icon></div>
+        <h3>{{ c.nome }}</h3>
+        <div class="cat-links">
+          <a class="chip" href="{{ url_for('videos', cat=c.id) }}">{{ c.videos }} vídeos</a>
+          <a class="chip" href="{{ url_for('cursos', cat=c.id) }}">{{ c.cursos }} cursos</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="{{ url_for('static', filename='js/ticker.js') }}"></script>
+{% endblock %}

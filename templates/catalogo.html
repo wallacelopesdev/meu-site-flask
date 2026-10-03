@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% from "partials/cards.html" import card %}
+{% block title %}{{ cfg.titulo }}{% endblock %}
+{% block content %}
+<main class="wrap" id="topo">
+  <header class="page-head">
+    <h1 class="ph1">{{ cfg.titulo }}</h1>
+    <p class="sub">{{ cfg.sub }}</p>
+  </header>
+  <div class="filters glass">
+    <label class="search"><iconify-icon icon="ph:magnifying-glass-bold"></iconify-icon><input id="busca" type="search" placeholder="Buscar em {{ cfg.titulo|lower }}…" aria-label="Buscar"></label>
+    <div class="chips" role="group" aria-label="Categorias">
+      <button class="chip" data-filtro="cat:todas" aria-pressed="true">Todas</button>
+      {% for c in cats_usadas %}<button class="chip" data-filtro="cat:{{ c.id }}" aria-pressed="false">{{ c.nome }}</button>{% endfor %}
+    </div>
+    {% if tipos|length > 1 %}
+    <div class="chips" role="group" aria-label="Tipo">
+      <button class="chip" data-filtro="tipo:todos" aria-pressed="true">Todos os tipos</button>
+      {% for t in tipos %}<button class="chip" data-filtro="tipo:{{ t }}" aria-pressed="false">{{ tipos_nome.get(t, t) }}</button>{% endfor %}
+    </div>
+    {% endif %}
+    <span class="count" id="contagem" aria-live="polite"></span>
+  </div>
+  <div class="grid" id="grid">
+    {% for item in itens %}{{ card(item, cat_por_id.get(item.categoria), chave, cfg.acao) }}{% endfor %}
+  </div>
+  <p class="empty" id="vazio" hidden>Nada encontrado. Tente outra busca ou limpe os filtros.</p>
+</main>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/catalogo.js') }}"></script>{% endblock %}

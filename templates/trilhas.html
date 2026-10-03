@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Trilhas{% endblock %}
+{% block content %}
+<main class="wrap" id="topo">
+  <header class="page-head">
+    <h1 class="ph1">Trilhas de estudo</h1>
+    <p class="sub">Escolha um objetivo e siga os passos na ordem. Cada passo leva aos cursos da categoria.</p>
+  </header>
+  {% for t in trilhas %}
+  <section class="trilha glass">
+    <div class="trilha-head">
+      <div class="ico"><iconify-icon icon="{{ t.icone }}"></iconify-icon></div>
+      <div><h2>{{ t.titulo }}</h2><p class="sub" style="margin:0">{{ t.desc }}</p></div>
+    </div>
+    <ol class="passos">
+      {% for p in t.passos %}
+      <li><a href="{{ url_for('cursos', cat=p.categoria) }}"><span class="n">{{ loop.index }}</span><span><b>{{ p.titulo }}</b><small>{{ p.desc }}</small></span><iconify-icon icon="ph:arrow-right-bold"></iconify-icon></a></li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endfor %}
+</main>
+{% endblock %}

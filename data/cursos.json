@@ -1,0 +1,14 @@
+[
+  {"titulo": "freeCodeCamp", "desc": "Currículo completo de web e Python com exercícios e certificados gratuitos.", "url": "https://www.freecodecamp.org", "categoria": "web", "tipo": "gratis", "imagem": ""},
+  {"titulo": "The Odin Project", "desc": "Trilha full stack com muita prática e projetos reais.", "url": "https://www.theodinproject.com", "categoria": "web", "tipo": "gratis", "imagem": ""},
+  {"titulo": "CS50 (Harvard)", "desc": "Introdução à ciência da computação, uma das melhores do mundo.", "url": "https://cs50.harvard.edu/x", "categoria": "algoritmos", "tipo": "gratis", "imagem": ""},
+  {"titulo": "Curso em Vídeo", "desc": "Cursos em português para quem está começando, com o professor Gustavo Guanabara.", "url": "https://www.cursoemvideo.com", "categoria": "python", "tipo": "gratis", "imagem": ""},
+  {"titulo": "DIO", "desc": "Bootcamps e trilhas em português, com projetos para o portfólio.", "url": "https://www.dio.me", "categoria": "carreira", "tipo": "misto", "imagem": ""},
+  {"titulo": "Alura", "desc": "Cursos em português de programação, dados, IA e carreira.", "url": "https://www.alura.com.br", "categoria": "carreira", "tipo": "pago", "imagem": ""},
+  {"titulo": "Rocketseat", "desc": "Trilhas de JavaScript, TypeScript, React e Node.js, com conteúdo gratuito e formações pagas.", "url": "https://www.rocketseat.com.br", "categoria": "javascript", "tipo": "misto", "imagem": ""},
+  {"titulo": "Coursera", "desc": "Cursos de universidades e empresas, em muitos casos com opção de auditar de graça.", "url": "https://www.coursera.org", "categoria": "algoritmos", "tipo": "misto", "imagem": ""},
+  {"titulo": "Udemy", "desc": "Marketplace com cursos de todos os níveis. Espere as promoções.", "url": "https://www.udemy.com", "categoria": "web", "tipo": "pago", "imagem": ""},
+  {"titulo": "MDN Web Docs", "desc": "A documentação oficial de HTML, CSS e JavaScript, com guias para iniciantes.", "url": "https://developer.mozilla.org/pt-BR/", "categoria": "web", "tipo": "gratis", "imagem": ""},
+  {"titulo": "roadmap.sh", "desc": "Mapas visuais do que estudar em cada área de TI.", "url": "https://roadmap.sh", "categoria": "carreira", "tipo": "gratis", "imagem": ""},
+  {"titulo": "GitHub Skills", "desc": "Cursos curtos e interativos de Git e GitHub, direto no seu repositório.", "url": "https://skills.github.com", "categoria": "git-devops", "tipo": "gratis", "imagem": ""}
+]

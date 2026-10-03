@@ -1,0 +1,19 @@
+[
+  {"titulo": "Desenvolvedor Front-end", "desc": "Do primeiro HTML até sites interativos publicados.", "icone": "ph:browser-fill",
+   "passos": [
+    {"titulo": "HTML e CSS", "desc": "Estrutura e visual das páginas.", "categoria": "web"},
+    {"titulo": "JavaScript", "desc": "Interatividade e lógica no navegador.", "categoria": "javascript"},
+    {"titulo": "Git e GitHub", "desc": "Guarde e publique seus projetos.", "categoria": "git-devops"},
+    {"titulo": "Monte seu portfólio", "desc": "Mostre o que você construiu.", "categoria": "carreira"}]},
+  {"titulo": "Back-end com Python", "desc": "Servidores, APIs e bancos de dados.", "icone": "ph:terminal-window-fill",
+   "passos": [
+    {"titulo": "Lógica com Python", "desc": "Variáveis, laços, funções e listas.", "categoria": "python"},
+    {"titulo": "Algoritmos", "desc": "Pensar como programador.", "categoria": "algoritmos"},
+    {"titulo": "Banco de dados", "desc": "SQL e modelagem de dados.", "categoria": "banco-de-dados"},
+    {"titulo": "Git e DevOps", "desc": "Versionamento e publicação.", "categoria": "git-devops"}]},
+  {"titulo": "Programar com IA", "desc": "Aprender mais rápido usando assistentes como parceiros de estudo.", "icone": "ph:robot-fill",
+   "passos": [
+    {"titulo": "Base de programação", "desc": "Entenda o que a IA escreve.", "categoria": "python"},
+    {"titulo": "IA para devs", "desc": "Prompts, revisão e depuração.", "categoria": "ia"},
+    {"titulo": "Projetos próprios", "desc": "Aprenda construindo.", "categoria": "web"}]}
+]

@@ -1,0 +1,14 @@
+[
+  {"titulo": "Python", "desc": "Instalador oficial para Windows, Mac e Linux.", "url": "https://www.python.org/downloads/", "categoria": "dl-linguagens", "tipo": "gratis", "icone": "ph:terminal-fill"},
+  {"titulo": "Node.js", "desc": "JavaScript fora do navegador, com o npm incluído.", "url": "https://nodejs.org/en/download", "categoria": "dl-linguagens", "tipo": "gratis", "icone": "ph:terminal-fill"},
+  {"titulo": "Java (Temurin JDK)", "desc": "Distribuição gratuita e aberta do JDK.", "url": "https://adoptium.net", "categoria": "dl-linguagens", "tipo": "gratis", "icone": "ph:terminal-fill"},
+  {"titulo": "Go", "desc": "Linguagem do Google para servidores e ferramentas.", "url": "https://go.dev/dl/", "categoria": "dl-linguagens", "tipo": "gratis", "icone": "ph:terminal-fill"},
+  {"titulo": "Rust", "desc": "Instalador (rustup) da linguagem focada em segurança e velocidade.", "url": "https://www.rust-lang.org/tools/install", "categoria": "dl-linguagens", "tipo": "gratis", "icone": "ph:terminal-fill"},
+  {"titulo": ".NET (C#)", "desc": "SDK para programar em C#.", "url": "https://dotnet.microsoft.com/download", "categoria": "dl-linguagens", "tipo": "gratis", "icone": "ph:terminal-fill"},
+  {"titulo": "PHP", "desc": "Downloads oficiais do PHP.", "url": "https://www.php.net/downloads", "categoria": "dl-linguagens", "tipo": "gratis", "icone": "ph:terminal-fill"},
+  {"titulo": "Visual Studio Code", "desc": "O editor de código mais usado do mundo.", "url": "https://code.visualstudio.com/download", "categoria": "dl-ferramentas", "tipo": "gratis", "icone": "ph:code-fill"},
+  {"titulo": "Git", "desc": "Controle de versão do seu código.", "url": "https://git-scm.com/downloads", "categoria": "dl-ferramentas", "tipo": "gratis", "icone": "ph:git-branch-fill"},
+  {"titulo": "Docker Desktop", "desc": "Rode aplicações em contêineres no seu computador.", "url": "https://www.docker.com/products/docker-desktop/", "categoria": "dl-ferramentas", "tipo": "misto", "icone": "ph:cube-fill"},
+  {"titulo": "PostgreSQL", "desc": "Banco de dados relacional open source.", "url": "https://www.postgresql.org/download/", "categoria": "dl-bancos", "tipo": "gratis", "icone": "ph:database-fill"},
+  {"titulo": "MySQL Community", "desc": "Banco de dados relacional muito usado na web.", "url": "https://dev.mysql.com/downloads/", "categoria": "dl-bancos", "tipo": "gratis", "icone": "ph:database-fill"}
+]

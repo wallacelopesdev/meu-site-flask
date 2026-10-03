@@ -1,0 +1,18 @@
+[
+  {"id": "web",            "nome": "Web (HTML e CSS)",  "icone": "ph:browser-fill",         "cor": "#2dd4bf", "home": true},
+  {"id": "javascript",     "nome": "JavaScript",        "icone": "ph:brackets-curly-fill",  "cor": "#e879f9", "home": true},
+  {"id": "python",         "nome": "Python",            "icone": "ph:terminal-window-fill", "cor": "#2dd4bf", "home": true},
+  {"id": "banco-de-dados", "nome": "Banco de dados",    "icone": "ph:database-fill",        "cor": "#e879f9", "home": true},
+  {"id": "git-devops",     "nome": "Git e DevOps",      "icone": "ph:git-branch-fill",      "cor": "#2dd4bf", "home": true},
+  {"id": "algoritmos",     "nome": "Algoritmos",        "icone": "ph:tree-structure-fill",  "cor": "#e879f9", "home": true},
+  {"id": "ia",             "nome": "IA para devs",      "icone": "ph:robot-fill",           "cor": "#2dd4bf", "home": true},
+  {"id": "carreira",       "nome": "Carreira",          "icone": "ph:briefcase-fill",       "cor": "#e879f9", "home": true},
+
+  {"id": "ia-chat",        "nome": "Conversa",          "icone": "ph:chat-circle-text-fill","cor": "#2dd4bf", "home": false},
+  {"id": "ia-codigo",      "nome": "Código",            "icone": "ph:code-fill",            "cor": "#e879f9", "home": false},
+  {"id": "ia-pesquisa",    "nome": "Pesquisa",          "icone": "ph:magnifying-glass-fill","cor": "#2dd4bf", "home": false},
+
+  {"id": "dl-linguagens",  "nome": "Linguagens",        "icone": "ph:terminal-fill",        "cor": "#2dd4bf", "home": false},
+  {"id": "dl-ferramentas", "nome": "Ferramentas",       "icone": "ph:wrench-fill",          "cor": "#e879f9", "home": false},
+  {"id": "dl-bancos",      "nome": "Bancos de dados",   "icone": "ph:database-fill",        "cor": "#2dd4bf", "home": false}
+]

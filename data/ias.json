@@ -1,0 +1,9 @@
+[
+  {"titulo": "Claude", "desc": "Ótimo para explicar código passo a passo, revisar e criar projetos.", "url": "https://claude.ai", "categoria": "ia-chat", "tipo": "misto", "imagem": ""},
+  {"titulo": "ChatGPT", "desc": "Assistente de conversa para dúvidas, exercícios e geração de código.", "url": "https://chatgpt.com", "categoria": "ia-chat", "tipo": "misto", "imagem": ""},
+  {"titulo": "Gemini", "desc": "IA do Google, integrada ao ecossistema Google.", "url": "https://gemini.google.com", "categoria": "ia-chat", "tipo": "misto", "imagem": ""},
+  {"titulo": "Microsoft Copilot", "desc": "Assistente gratuito da Microsoft, direto no navegador.", "url": "https://copilot.microsoft.com", "categoria": "ia-chat", "tipo": "gratis", "imagem": ""},
+  {"titulo": "GitHub Copilot", "desc": "Sugestões de código dentro do VS Code, com plano gratuito para estudantes.", "url": "https://github.com/features/copilot", "categoria": "ia-codigo", "tipo": "misto", "imagem": ""},
+  {"titulo": "Cursor", "desc": "Editor de código criado em torno da IA.", "url": "https://cursor.com", "categoria": "ia-codigo", "tipo": "misto", "imagem": ""},
+  {"titulo": "Perplexity", "desc": "Pesquisa com respostas e fontes citadas, boa para documentação.", "url": "https://www.perplexity.ai", "categoria": "ia-pesquisa", "tipo": "misto", "imagem": ""}
+]

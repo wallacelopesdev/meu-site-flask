@@ -1,0 +1,18 @@
+  /* ticker */
+  .scroll-space{height:500vh;position:relative;z-index:1}
+  .ticker-container{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;color:#fff}
+  .ticker-container::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+  .ticker-track{display:flex;align-items:center;gap:2rem;width:max-content;padding:0 20vw;will-change:transform}
+  .word-group{display:inline-flex;align-items:center;flex-shrink:0;transform-origin:left center}
+  .text-huge{font:900 clamp(4rem,12vw,15rem)/.9 "Epilogue",sans-serif;text-transform:uppercase;letter-spacing:-.04em}
+  .text-accent{font:italic 600 clamp(3rem,9vw,11rem)/1 "Playfair Display",serif;color:var(--mag);text-transform:none;letter-spacing:-.02em}
+  .icon-symbol{font-size:clamp(2rem,5vw,6rem);color:var(--aqua);margin:0 3rem}
+  .svg-connector{height:clamp(2rem,6vw,8rem);width:auto;overflow:visible;stroke-linecap:round;margin:0 3rem}
+  .svg-connector.soft{color:#fff;opacity:.6}
+  .svg-connector.mag{color:var(--mag);opacity:.9}
+  .scroll-hint{position:absolute;left:0;right:0;bottom:6vh;text-align:center;font-size:.95rem;opacity:.5;z-index:2}
+  .scroll-space.static{height:auto}
+  .scroll-space.static .ticker-container{position:relative;height:auto;overflow-x:auto;padding:14vh 0 18vh}
+  .scroll-space.static .ticker-track{transform:none!important}
+

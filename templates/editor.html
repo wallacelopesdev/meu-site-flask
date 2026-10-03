@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Editor online{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ url_for('static', filename='css/editor.css') }}">{% endblock %}
+{% block content %}
+<main class="ed" id="topo">
+  <div class="ed-bar glass">
+    <select id="modelo" class="sel" aria-label="Novo projeto"></select>
+    <button class="btn btn-ghost sm" id="novoArq"><iconify-icon icon="ph:file-plus-bold"></iconify-icon>Arquivo</button>
+    <button class="btn btn-grad sm" id="rodar" title="Ctrl + Enter"><iconify-icon icon="ph:play-fill"></iconify-icon>Executar</button>
+    <span class="ed-sp"></span>
+    <button class="btn btn-ghost sm" id="dlArq"><iconify-icon icon="ph:download-simple-bold"></iconify-icon>Arquivo</button>
+    <button class="btn btn-ghost sm" id="dlZip"><iconify-icon icon="ph:file-zip-bold"></iconify-icon>Tudo (.zip)</button>
+    <a class="btn btn-ghost sm" href="{{ url_for('ias') }}"><iconify-icon icon="ph:robot-fill"></iconify-icon>Pedir ajuda à IA</a>
+  </div>
+  <div class="ed-grid">
+    <aside class="ed-files glass" id="arquivos" aria-label="Arquivos do projeto"></aside>
+    <div class="ed-code" id="monaco"></div>
+    <div class="ed-out glass">
+      <div class="ed-tit">Resultado</div>
+      <iframe id="preview" sandbox="allow-scripts allow-modals" title="Resultado"></iframe>
+      <div class="ed-tit">Console <button class="link" id="limpar">limpar</button></div>
+      <div id="console" role="log" aria-live="polite"></div>
+    </div>
+  </div>
+  <p class="ed-note">Roda no navegador: HTML/CSS/JS e Python. Java, C, C++, C#, Go, Rust, PHP e outras: escreva aqui, baixe e execute no seu computador (veja <a href="{{ url_for('downloads') }}">Downloads</a>). Seus arquivos ficam salvos neste navegador.</p>
+</main>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="{{ url_for('static', filename='js/editor.js') }}"></script>
+{% endblock %}

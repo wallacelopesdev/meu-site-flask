@@ -1,0 +1,10 @@
+[
+  {"titulo": "Curso de Redes", "canal": "Bóson Treinamentos", "id": "efGBoJ-f_2Y", "categoria": "Redes", "nivel": "Iniciante", "idioma": "Português"},
+  {"titulo": "Learn JavaScript – Full Course for Beginners", "canal": "freeCodeCamp", "id": "PkZNo7MFNFg", "categoria": "javascript", "nivel": "Iniciante", "idioma": "Inglês"},
+  {"titulo": "HTML Full Course – Build a Website", "canal": "freeCodeCamp", "id": "pQN-pnXPaVg", "categoria": "web", "nivel": "Iniciante", "idioma": "Inglês"},
+  {"titulo": "CSS Tutorial – Zero to Hero", "canal": "freeCodeCamp", "id": "G3e-cpL7ofc", "categoria": "web", "nivel": "Iniciante", "idioma": "Inglês"},
+  {"titulo": "SQL Tutorial – Full Database Course", "canal": "freeCodeCamp", "id": "HXV3zeQKqGY", "categoria": "banco-de-dados", "nivel": "Iniciante", "idioma": "Inglês"},
+  {"titulo": "Git and GitHub for Beginners – Crash Course", "canal": "freeCodeCamp", "id": "RGOj5yH7evk", "categoria": "git-devops", "nivel": "Iniciante", "idioma": "Inglês"},
+  {"titulo": "Node.js and Express.js – Full Course", "canal": "freeCodeCamp", "id": "Oe421EPjeBE", "categoria": "javascript", "nivel": "Intermediário", "idioma": "Inglês"},
+  {"titulo": "Harvard CS50 – Full Computer Science Course", "canal": "freeCodeCamp", "id": "8mAITcNt710", "categoria": "algoritmos", "nivel": "Intermediário", "idioma": "Inglês"}
+]

@@ -1,0 +1,12 @@
+{% set menu = [('index','Início'),('trilhas','Trilhas'),('videos','Vídeos'),('cursos','Cursos'),('editor','Editor'),('ias','IAs'),('downloads','Downloads')] %}
+<nav class="nav" aria-label="Principal">
+  <div class="nav-in">
+    <a class="brand" href="{{ url_for('index') }}"><i>&lt;/&gt;</i>{{ site.nome }}</a>
+    <div class="links">{% for ep, label in menu %}<a href="{{ url_for(ep) }}"{% if request.endpoint == ep %} aria-current="page"{% endif %}>{{ label }}</a>{% endfor %}</div>
+    <div class="nav-right">
+      <a class="btn btn-white" href="{{ url_for('editor') }}">Abrir editor</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobile" aria-label="Abrir menu"><iconify-icon icon="ph:list-bold" id="menuIcon"></iconify-icon></button>
+    </div>
+  </div>
+  <div class="mobile" id="mobile">{% for ep, label in menu %}<a href="{{ url_for(ep) }}">{{ label }}</a>{% endfor %}</div>
+</nav>
